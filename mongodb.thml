@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos MongoDB · Mia Kaori</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>DESARROLLO DE APLICACIONES WEB</span><span>✦</span>
+      <span>JAVA</span><span>✦</span>
+      <span>SQL / MARIADB</span><span>✦</span>
+      <span>HTML / CSS</span><span>✦</span>
+      <span>PHP</span><span>✦</span>
+      <span>MONGODB</span><span>✦</span>
+      <span>GIT / GITHUB</span><span>✦</span>
+      <span>DESARROLLO DE APLICACIONES WEB</span><span>✦</span>
+      <span>JAVA</span><span>✦</span>
+      <span>SQL / MARIADB</span><span>✦</span>
+      <span>HTML / CSS</span><span>✦</span>
+      <span>PHP</span><span>✦</span>
+      <span>MONGODB</span><span>✦</span>
+      <span>GIT / GITHUB</span><span>✦</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">MIA KAORI</a>
+    <ul class="nav-links">
+      <li><a href="index.html#sobreMi">Sobre mí</a></li>
+      <li><a href="index.html#formacion">Formación</a></li>
+      <li><a href="index.html#habilidades">Habilidades</a></li>
+      <li><a href="index.html#proyectos">Proyectos</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-head">
+    <a href="index.html#proyectos" class="back">← Volver a proyectos</a>
+    <p class="section-label">// proyectos de mongodb</p>
+    <h1>Proyectos <span class="count">MongoDB</span></h1>
+    <p class="page-intro">Bases de datos NoSQL orientadas a documentos: operaciones CRUD y agregaciones.</p>
+  </header>
+
+  <main>
+    <section>
+      <p class="empty">Próximamente</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <p>© 2026 Mia Kaori</p>
+      <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+  </footer>
+
+  <script>
+    const elementos = document.querySelectorAll('.project-card, .empty');
+    elementos.forEach(el => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elementos.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
