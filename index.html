@@ -15,14 +15,20 @@
   <!-- Cinta superior -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>ESTUDIANTE DAW</span><span>✦</span>
-      <span>BUSCANDO PRÁCTICAS</span><span>✦</span>
-      <span>JAVA · SQL · HTML/CSS · PHP</span><span>✦</span>
-      <span>MADE IN MADRID</span><span>✦</span>
-      <span>ESTUDIANTE DAW</span><span>✦</span>
-      <span>BUSCANDO PRÁCTICAS</span><span>✦</span>
-      <span>JAVA · SQL · HTML/CSS · PHP</span><span>✦</span>
-      <span>MADE IN MADRID</span><span>✦</span>
+      <span>DESARROLLO DE APLICACIONES WEB</span><span>✦</span>
+      <span>JAVA</span><span>✦</span>
+      <span>SQL / MARIADB</span><span>✦</span>
+      <span>HTML / CSS</span><span>✦</span>
+      <span>PHP</span><span>✦</span>
+      <span>MONGODB</span><span>✦</span>
+      <span>GIT / GITHUB</span><span>✦</span>
+      <span>DESARROLLO DE APLICACIONES WEB</span><span>✦</span>
+      <span>JAVA</span><span>✦</span>
+      <span>SQL / MARIADB</span><span>✦</span>
+      <span>HTML / CSS</span><span>✦</span>
+      <span>PHP</span><span>✦</span>
+      <span>MONGODB</span><span>✦</span>
+      <span>GIT / GITHUB</span><span>✦</span>
     </div>
   </div>
 
@@ -40,7 +46,6 @@
     <p class="hero-eyebrow">// portfolio personal · 2026</p>
     <h1>Mia<br />Kaori<span class="dot">.</span></h1>
     <p class="hero-desc">
-      Junior web developer, <em>limited edition.</em><br />
       Estudiante de Desarrollo de Aplicaciones Web (DAW).
     </p>
     <div class="hero-cta">
@@ -261,7 +266,7 @@
         <p class="section-label">// proyectos de mongodb</p>
         <h2>Proyectos <span class="count">MongoDB</span></h2>
       </div>
-      <p class="empty">Próximamente · nuevo drop en camino</p>
+      <p class="empty">Próximamente</p>
     </section>
 
     <section id="proyectos-php">
@@ -269,7 +274,7 @@
         <p class="section-label">// proyectos de php</p>
         <h2>Proyectos <span class="count">PHP</span></h2>
       </div>
-      <p class="empty">Próximamente · en formación</p>
+      <p class="empty">Próximamente</p>
     </section>
 
   </main>
@@ -280,6 +285,23 @@
       <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener">GitHub →</a>
     </div>
   </footer>
+
+  <!-- Aparición al hacer scroll -->
+  <script>
+    const elementos = document.querySelectorAll('.section-head, .about-text, .edu-item, .skill-card, .project-card, .empty');
+    elementos.forEach(el => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elementos.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
