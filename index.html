@@ -1,15 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Mia Kaori · Portfolio</title>
+  <meta name="description" content="Portfolio de Mia Kaori, estudiante de Desarrollo de Aplicaciones Web (DAW)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
 </head>
 <body>
 
+  <!-- Cinta superior -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>ESTUDIANTE DAW</span><span>✦</span>
+      <span>BUSCANDO PRÁCTICAS</span><span>✦</span>
+      <span>JAVA · SQL · HTML/CSS · PHP</span><span>✦</span>
+      <span>MADE IN MADRID</span><span>✦</span>
+      <span>ESTUDIANTE DAW</span><span>✦</span>
+      <span>BUSCANDO PRÁCTICAS</span><span>✦</span>
+      <span>JAVA · SQL · HTML/CSS · PHP</span><span>✦</span>
+      <span>MADE IN MADRID</span><span>✦</span>
+    </div>
+  </div>
+
   <nav>
-    <span class="nav-logo"></span>
+    <a href="#" class="nav-logo">MIA KAORI</a>
     <ul class="nav-links">
       <li><a href="#sobreMi">Sobre mí</a></li>
       <li><a href="#formacion">Formación</a></li>
@@ -18,301 +36,250 @@
     </ul>
   </nav>
 
-  <div class="hero">
-    <p class="hero-eyebrow">// portfolio personal</p>
-    <h1>Hola, soy<br /><span> Mia Kaori</span></h1>
+  <header class="hero">
+    <p class="hero-eyebrow">// portfolio personal · 2026</p>
+    <h1>Mia<br />Kaori<span class="dot">.</span></h1>
     <p class="hero-desc">
+      Junior web developer, <em>limited edition.</em><br />
       Estudiante de Desarrollo de Aplicaciones Web (DAW).
+    </p>
     <div class="hero-cta">
-      <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-      <a href="https://github.com/Mia-Kaori" target="_blank" class="btn btn-ghost">GitHub →</a>
+      <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+      <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
     </div>
-  </div>
+  </header>
+
+  <main>
 
     <section id="sobreMi">
-    <p class="section-label">//sobre mí</p>
-    <div class="about-content">
-      <div class="about-text">
-        <p>Estudiante de Desarrollo de Aplicaciones Web (DAW), interesada en el desarrollo frontend 
-          y backend y en la creación de aplicaciones web funcionales y orientadas al usuario. 
-          Busco una oportunidad para aplicar mis conocimientos en un entorno profesional y seguir 
-          desarrollándome como desarrolladora web.
-        </p>
+      <div class="section-head">
+        <p class="section-label">// sobre mí</p>
+        <h2>Sobre mí</h2>
       </div>
-     </div>
+      <p class="about-text">
+        Estudiante de Desarrollo de Aplicaciones Web (DAW), interesada en el desarrollo frontend
+        y backend y en la creación de aplicaciones web funcionales y orientadas al usuario.
+        Busco una oportunidad para aplicar mis conocimientos en un entorno profesional y seguir
+        desarrollándome como desarrolladora web.
+      </p>
     </section>
 
     <section id="formacion">
-    <p class="section-label">//formación académica</p>
-    <div class="edu-list">
-
-      <div class="edu-item">
-        <span class="edu-year">2025 — 2027</span>
-        <div>
-          <p class="edu-name">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</p>
-          <p class="edu-place">IES Jose Luis Sampedro · Tres Cantos, Madrid </p>
+      <div class="section-head">
+        <p class="section-label">// formación académica</p>
+        <h2>Formación</h2>
+      </div>
+      <div class="edu-list">
+        <div class="edu-item">
+          <span class="edu-year">2025 — 2027</span>
+          <div>
+            <p class="edu-name">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</p>
+            <p class="edu-place">IES José Luis Sampedro · Tres Cantos, Madrid</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <span class="edu-year">2022 — 2024</span>
+          <div>
+            <p class="edu-name">Bachillerato Científico Tecnológico · Programa de Excelencia</p>
+            <p class="edu-place">IES Pintor Antonio López · Tres Cantos, Madrid</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="edu-item">
-        <span class="edu-year">2022 — 2024</span>
-        <div>
-          <p class="edu-name">Bachillerato Científico Tecnológico en el programa de Excelencia  </p>
-          <p class="edu-place">IES Pintor Antonio López · Tres Cantos, Madrid</p>
+    <section id="habilidades">
+      <div class="section-head">
+        <p class="section-label">// habilidades técnicas</p>
+        <h2>Habilidades</h2>
+      </div>
+      <div class="skills-grid">
+        <a class="skill-card" href="#proyectos">
+          <p class="skill-name">Java</p>
+          <p class="skill-level">POO · JDBC · Swing · Serialización</p>
+        </a>
+        <a class="skill-card" href="#proyectos-php">
+          <p class="skill-name">PHP</p>
+          <p class="skill-level">En formación</p>
+        </a>
+        <a class="skill-card" href="#proyectos-sql">
+          <p class="skill-name">SQL / MariaDB</p>
+          <p class="skill-level">DDL · DML · DQL · DCL · TCL · Procedimientos · Triggers · Funciones</p>
+        </a>
+        <div class="skill-card">
+          <p class="skill-name">HTML / CSS</p>
+          <p class="skill-level">Maquetación · Responsive design</p>
+        </div>
+        <a class="skill-card" href="#proyectos-mongo">
+          <p class="skill-name">MongoDB</p>
+          <p class="skill-level">DDL · DML · Agregaciones</p>
+        </a>
+        <div class="skill-card">
+          <p class="skill-name">AWS</p>
+          <p class="skill-level">Fundamentos · Cloud básico</p>
+        </div>
+        <div class="skill-card">
+          <p class="skill-name">Git / GitHub</p>
+          <p class="skill-level">Control de versiones · GitHub Pages</p>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section id="habilidades">
-    <p class="section-label">//habilidades técnicas</p>
-    <div class="skills-grid">
-
-      <a class="skill-card" href="#proyectos">
-        <p class="skill-name">Java</p>
-        <p class="skill-level">POO · JDBC · Swing · Serialización</p>
-      </a>
-
-      <a class="skill-card" href="#proyectos-php">
-        <p class="skill-name">PHP</p>
-        <p class="skill-level">En formación</p>
-      </a>
-
-      <a class="skill-card" href="#proyectos-sql">
-        <p class="skill-name">SQL / MariaDB</p>
-        <p class="skill-level">DDL · DML · DQL · DCL · TCL · Procedimientos · Triggers · Funciones</p>
-      </a>
-
-      <div class="skill-card">
-        <p class="skill-name">HTML / CSS</p>
-        <p class="skill-level">Maquetación · Responsive design</p>
+    <section id="proyectos">
+      <div class="section-head">
+        <p class="section-label">// proyectos de java</p>
+        <h2>Proyectos <span class="count">Java</span></h2>
       </div>
+      <div class="projects-grid">
 
-      <a class="skill-card" href="#proyectos-mongo">
-        <p class="skill-name">MongoDB</p>
-        <p class="skill-level">DDL · DML · Agregaciones</p>
-      </a>
+        <a class="project-card" href="https://github.com/Mia-Kaori/practica-java-bingo" target="_blank" rel="noopener">
+          <p class="project-title">Minibingo</p>
+          <p class="project-desc">Simulación de un minibingo por consola con 5 jugadores, cartones aleatorios y detección de ganador.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
 
-      <div class="skill-card">
-        <p class="skill-name">AWS</p>
-        <p class="skill-level">Fundamentos · Cloud básico</p>
+        <a class="project-card" href="https://github.com/Mia-Kaori/bingo-java-ampliacion" target="_blank" rel="noopener">
+          <p class="project-title">Minibingo · Ampliación</p>
+          <p class="project-desc">Ampliación del minibingo con sistema de dinero, eliminación de jugadores y detección de ganador absoluto.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/figuras-geometricas-java" target="_blank" rel="noopener">
+          <p class="project-title">Figuras geométricas</p>
+          <p class="project-desc">Cálculo de superficie y volumen de figuras geométricas con color asignado aleatoriamente, usando Programación Orientada a Objetos.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/figuras-geometricas-ampliacion" target="_blank" rel="noopener">
+          <p class="project-title">Figuras geométricas · Ampliación</p>
+          <p class="project-desc">Ampliación de la práctica de figuras geométricas añadiendo material, cálculo de peso y coste de pintura.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/parque-de-atracciones-java" target="_blank" rel="noopener">
+          <p class="project-title">Parque de atracciones</p>
+          <p class="project-desc">Gestión de una pequeña feria con tres atracciones, feriantes, cuadrante semanal y cálculo de ganancias. Aplica interfaces, ArrayList y matrices.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/alquiler-coche-java" target="_blank" rel="noopener">
+          <p class="project-title">Alquiler de coches</p>
+          <p class="project-desc">Gestión de una agencia de alquiler de coches. Aplica ArrayList.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag">Colecciones</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/practica-censo-java" target="_blank" rel="noopener">
+          <p class="project-title">Censo de alumnos y partes</p>
+          <p class="project-desc">Gestión del censo de alumnos de un centro educativo y del registro de partes disciplinarios, usando HashSet y ArrayList para diferenciar entidades únicas de duplicadas.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag">Colecciones</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/gestor-multimedia-java" target="_blank" rel="noopener">
+          <p class="project-title">Gestor multimedia</p>
+          <p class="project-desc">Catálogo de contenidos multimedia (películas, podcasts, cursos online) aplicando herencia, polimorfismo dinámico, clases abstractas e interfaces.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/refugio-de-animales-java" target="_blank" rel="noopener">
+          <p class="project-title">Refugio de animales</p>
+          <p class="project-desc">Gestión de los animales de un refugio usando herencia y polimorfismo dinámico. Sin arrays ni colecciones: todo con variables individuales.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/granja-java" target="_blank" rel="noopener">
+          <p class="project-title">Granja</p>
+          <p class="project-desc">Gestión de los animales de una granja (vacas, cerdo, ovejas) usando clases abstractas, herencia e interfaces.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/supermercado-java" target="_blank" rel="noopener">
+          <p class="project-title">Supermercado</p>
+          <p class="project-desc">Interfaz gráfica de dos ventanas para gestionar la compra y devolución de productos de un supermercado, con los productos gestionados mediante arrays.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag tag-accent">Swing</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/videoclub-java" target="_blank" rel="noopener">
+          <p class="project-title">Videoclub</p>
+          <p class="project-desc">Gestión del alquiler de películas y la venta de CDs de música de un videoclub.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag tag-accent">Swing</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/academia-java" target="_blank" rel="noopener">
+          <p class="project-title">Academia</p>
+          <p class="project-desc">Interfaz Swing con persistencia en fichero de texto para gestionar el personal (profesores y administrativos) de una academia, usando herencia y polimorfismo.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag tag-accent">Swing</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/fichero-de-texto-java" target="_blank" rel="noopener">
+          <p class="project-title">Fichero de texto</p>
+          <p class="project-desc">Lista de contactos por consola con persistencia en un fichero CSV.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag">Ficheros</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/fichero-binario-java" target="_blank" rel="noopener">
+          <p class="project-title">Fichero binario</p>
+          <p class="project-desc">Lista de contactos en memoria con persistencia en un fichero binario (contactos.bin).</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag">Ficheros</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/biblioteca-java" target="_blank" rel="noopener">
+          <p class="project-title">Biblioteca</p>
+          <p class="project-desc">Gestión de una biblioteca mediante operaciones CRUD sobre una base de datos SQLite.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag tag-accent">SQLite</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/biblioteca-opcional-java" target="_blank" rel="noopener">
+          <p class="project-title">Biblioteca · Ampliación</p>
+          <p class="project-desc">Versión ampliada de la biblioteca: añade búsqueda avanzada y listados ordenados sobre el CRUD base.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag tag-accent">SQLite</span></div>
+        </a>
+
+        <a class="project-card" href="https://github.com/Mia-Kaori/clinica-java" target="_blank" rel="noopener">
+          <p class="project-title">Clínica</p>
+          <p class="project-desc">Gestión de los pacientes de una clínica mediante operaciones CRUD sobre una base de datos SQLite.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">POO</span><span class="tag tag-accent">SQLite</span></div>
+        </a>
+
       </div>
+    </section>
 
-      <div class="skill-card">
-        <p class="skill-name">Git / GitHub</p>
-        <p class="skill-level">Control de versiones · GitHub Pages</p>
+    <section id="proyectos-sql">
+      <div class="section-head">
+        <p class="section-label">// proyectos de E/R · sql/mariadb</p>
+        <h2>Proyectos <span class="count">SQL</span></h2>
       </div>
+      <div class="projects-grid">
+        <a class="project-card" href="https://github.com/Mia-Kaori/er-01" target="_blank" rel="noopener">
+          <p class="project-title">Ejercicio E/R</p>
+          <p class="project-desc">Modelo para gestionar información de empleados y departamentos.</p>
+          <div class="tags"><span class="tag">E/R</span><span class="tag">MariaDB</span></div>
+        </a>
+      </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="proyectos-mongo">
+      <div class="section-head">
+        <p class="section-label">// proyectos de mongodb</p>
+        <h2>Proyectos <span class="count">MongoDB</span></h2>
+      </div>
+      <p class="empty">Próximamente · nuevo drop en camino</p>
+    </section>
 
-  <section id="proyectos">
-    <p class="section-label">//proyectos</p>
-    <p class="section-label">//proyectos de java</p>
-    <div class="projects-grid">
+    <section id="proyectos-php">
+      <div class="section-head">
+        <p class="section-label">// proyectos de php</p>
+        <h2>Proyectos <span class="count">PHP</span></h2>
+      </div>
+      <p class="empty">Próximamente · en formación</p>
+    </section>
 
-      <a class="project-card" href="https://github.com/Mia-Kaori/practica-java-bingo" target="_blank">
-        <p class="project-title">Minibingo - Java POO</p>
-        <p class="project-desc">Simulación de un minibingo por consola con 5 jugadores, cartones aleatorios y detección de ganador.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/bingo-java-ampliacion" target="_blank">
-        <p class="project-title">Minibingo - Ampliación - Java POO</p>
-        <p class="project-desc">Ampliación del minibingo con sistema de dinero, eliminación de jugadores y detección de ganador absoluto.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/figuras-geometricas-java" target="_blank">
-        <p class="project-title">Figuras - Geométricas - Java POO</p>
-        <p class="project-desc">Cálculo de superficie y volumen de figuras geométricas con color asignado aleatoriamente, usando Programación Orientada a Objetos.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/figuras-geometricas-ampliacion" target="_blank">
-        <p class="project-title">Figuras - Geométricas - Ampliación - Java POO</p>
-        <p class="project-desc">Ampliación de la práctica de figuras geométricas añadiendo material, cálculo de peso y coste de pintura.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/parque-de-atracciones-java" target="_blank">
-        <p class="project-title">Parque de Atracciones - Java POO</p>
-        <p class="project-desc">Gestión de una pequeña feria con tres atracciones, feriantes, cuadrante semanal y cálculo de ganancias. Aplica interfaces, ArrayList y matrices.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/alquiler-coche-java" target="_blank">
-        <p class="project-title">Alquiler de Coches — Java (POO + Colecciones)</p>
-        <p class="project-desc">Gestión de una agencia de alquiler de coches. Aplica ArrayList.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/practica-censo-java" target="_blank">
-        <p class="project-title">Censo de alumnos y registro de partes - Java (POO + Colecciones)</p>
-        <p class="project-desc">Aplicación en Java para gestionar el censo de alumnos de un centro educativo y el registro de partes disciplinarios, usando HashSet y ArrayList para diferenciar entidades únicas de duplicadas.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-    
-      <a class="project-card" href="https://github.com/Mia-Kaori/gestor-multimedia-java" target="_blank">
-        <p class="project-title">Gestor Multimedia - Java POO</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona un catálogo de contenidos multimedia (películas, podcasts, cursos online) aplicando herencia, polimorfismo dinámico, clases abstractas e interfaces.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-    
-      <a class="project-card" href="https://github.com/Mia-Kaori/refugio-de-animales-java" target="_blank">
-        <p class="project-title">Refugio de Animales - Java POO</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona animales de un refugio usando herencia y polimorfismo dinámico. Sin arrays ni colecciones: todo se maneja con variables individuales.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/granja-java" target="_blank">
-        <p class="project-title">Granja - Java POO</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona los animales de una granja (vacas, cerdo, ovejas) usando clases abstractas, herencia e interfaces.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/supermercado-java" target="_blank">
-        <p class="project-title">Supermercado - Java POO + interfaces gráficas</p>
-        <p class="project-desc">Aplicación Java con interfaz gráfica (dos ventanas) para gestionar la compra y devolución de productos de un supermercado. Los productos se gestionan mediante arrays, no con variables independientes.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-          <span class="tag">Swing</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/videoclub-java" target="_blank">
-        <p class="project-title">Videoclub - Java POO + interfaces gráficas</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona el alquiler de películas y la venta de CDs de música de un videoclub.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-          <span class="tag">Swing</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/academia-java" target="_blank">
-        <p class="project-title">Academia - Java POO + interfaces gráficas</p>
-        <p class="project-desc">Aplicación Java con interfaz gráfica (Swing) y persistencia en fichero de texto para gestionar el personal (profesores y administrativos) de una academia, usando herencia y polimorfismo.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-          <span class="tag">Swing</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/fichero-de-texto-java" target="_blank">
-        <p class="project-title">Fichero de texto - Java POO</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona una lista de contactos con persistencia en un fichero CSV.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/fichero-binario-java" target="_blank">
-        <p class="project-title">Fichero binario - Java POO</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona una lista de contactos en memoria con persistencia en un fichero binario (contactos.bin).</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/biblioteca-java" target="_blank">
-        <p class="project-title">Biblioteca - Java POO - SQLite</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona una biblioteca mediante operaciones CRUD sobre una base de datos SQLite.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-          <span class="tag">SQLite</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/biblioteca-opcional-java" target="_blank">
-        <p class="project-title">Biblioteca - Java POO - SQLite</p>
-        <p class="project-desc">Versión ampliada de la práctica de gestión de biblioteca con Java y SQLite: añade búsqueda avanzada y listados ordenados sobre el CRUD base.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-          <span class="tag">SQLite</span>
-        </div>
-      </a>
-
-      <a class="project-card" href="https://github.com/Mia-Kaori/clinica-java" target="_blank">
-        <p class="project-title">Clínica - Java POO - SQLite</p>
-        <p class="project-desc">Aplicación de consola en Java que gestiona los pacientes de una clínica mediante operaciones CRUD sobre una base de datos SQLite.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">POO</span>
-          <span class="tag">SQLite</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <section id="proyectos-sql">
-    <p class="section-label">//proyectos de E/R - sql/mariadb</p>
-    <div class="projects-grid">
-      <a class="project-card" href="https://github.com/Mia-Kaori/er-01" target="_blank">
-        <p class="project-title">Ejercicio E/R</p>
-        <p class="project-desc">Gestionar información de empleados y departamentos</p>
-        <div class="tags">
-          <span class="tag">E/R</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <section id="proyectos-mongo">
-    <p class="section-label">//proyectos de mongodb</p>
-    <div class="projects-grid">
-
-    </div>
-  </section>
-
-  <section id="proyectos-php">
-    <p class="section-label">//proyectos de php</p>
-    <div class="projects-grid">
-
-    </div>
-  </section>
+  </main>
 
   <footer>
-    <p>Mia Kaori 2026</p>
+    <p class="footer-big">From DAW<br />to web.</p>
+    <div class="footer-row">
+      <p>© 2026 Mia Kaori</p>
+      <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener">GitHub →</a>
+    </div>
   </footer>
 
 </body>
