@@ -5,180 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mia Kaori · Portfolio</title>
   <meta name="description" content="Portfolio de Mia Kaori, estudiante de Desarrollo de Aplicaciones Web (DAW)." />
+
+  <!-- Aplica el tema guardado antes de pintar la página (evita parpadeo) -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('tema'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Cinta superior -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>DESARROLLO DE APLICACIONES WEB</span><span>✦</span>
-      <span>JAVA</span><span>✦</span>
-      <span>SQL / MARIADB</span><span>✦</span>
-      <span>HTML / CSS</span><span>✦</span>
-      <span>PHP</span><span>✦</span>
-      <span>MONGODB</span><span>✦</span>
-      <span>GIT / GITHUB</span><span>✦</span>
-      <span>DESARROLLO DE APLICACIONES WEB</span><span>✦</span>
-      <span>JAVA</span><span>✦</span>
-      <span>SQL / MARIADB</span><span>✦</span>
-      <span>HTML / CSS</span><span>✦</span>
-      <span>PHP</span><span>✦</span>
-      <span>MONGODB</span><span>✦</span>
-      <span>GIT / GITHUB</span><span>✦</span>
-    </div>
-  </div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <nav>
-    <a href="index.html" class="nav-logo">MIA KAORI</a>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo" aria-label="Inicio">MK</a>
     <ul class="nav-links">
       <li><a href="#sobreMi">Sobre mí</a></li>
       <li><a href="#formacion">Formación</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
     </ul>
+    <button class="theme-toggle" type="button" aria-label="Cambiar tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
   </nav>
 
   <header class="hero">
-    <p class="hero-eyebrow">// portfolio personal · 2026</p>
-    <h1>Mia<br />Kaori<span class="dot">.</span></h1>
-    <p class="hero-desc">
-      Estudiante de Desarrollo de Aplicaciones Web (DAW).
+    <p class="status"><span class="status-dot"></span>Buscando prácticas · DAW</p>
+    <h1 class="split" aria-label="Mia Kaori">Mia<br /><em>Kaori</em></h1>
+    <p class="hero-line">
+      <span class="prompt">&gt;</span>interesada en <span class="typed">aplicaciones web</span><span class="caret"></span>
     </p>
     <div class="hero-cta">
-      <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-      <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+      <a href="#proyectos" class="btn btn-primary">Ver proyectos <span class="arrow">→</span></a>
+      <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener" class="btn btn-ghost">GitHub <span class="arrow">↗</span></a>
     </div>
+    <span class="scroll-hint">Scroll</span>
   </header>
+
+  <div class="band" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Desarrollo de aplicaciones web</span><span class="sep">✦</span>
+      <span>Java</span><span class="sep">✦</span>
+      <span>SQL &amp; MariaDB</span><span class="sep">✦</span>
+      <span>HTML &amp; CSS</span><span class="sep">✦</span>
+      <span>PHP</span><span class="sep">✦</span>
+      <span>MongoDB</span><span class="sep">✦</span>
+      <span>Git &amp; GitHub</span><span class="sep">✦</span>
+      <span>AWS</span><span class="sep">✦</span>
+    </div>
+  </div>
 
   <main>
 
-    <section id="sobreMi">
+    <section class="section" id="sobreMi">
       <div class="section-head">
-        <p class="section-label">// sobre mí</p>
-        <h2>Sobre mí</h2>
+        <p class="section-label"><b>01</b> — sobre mí</p>
+        <h2>Quién <em>soy</em></h2>
       </div>
-      <p class="about-text">
-        Estudiante de Desarrollo de Aplicaciones Web (DAW), interesada en el desarrollo frontend
-        y backend y en la creación de aplicaciones web funcionales y orientadas al usuario.
-        Busco una oportunidad para aplicar mis conocimientos en un entorno profesional y seguir
-        desarrollándome como desarrolladora web.
-      </p>
+
+      <div class="bento">
+        <article class="card glow about">
+          <p class="card-label">Sobre mí</p>
+          <p class="about-text">
+            Estudiante de Desarrollo de Aplicaciones Web (DAW), interesada en el desarrollo frontend
+            y backend y en la creación de aplicaciones web funcionales y orientadas al usuario.
+            Busco una oportunidad para aplicar mis conocimientos en un entorno profesional y seguir
+            desarrollándome como desarrolladora web.
+          </p>
+        </article>
+
+        <article class="card glow stat">
+          <p class="card-label">Proyectos</p>
+          <div>
+            <p class="stat-num" data-count="18">18</p>
+            <p class="stat-label">proyectos en Java</p>
+          </div>
+        </article>
+
+        <article class="card glow edu" id="formacion">
+          <p class="card-label">Formación académica</p>
+          <div class="edu-item">
+            <span class="edu-year">2025 — 2027</span>
+            <div>
+              <p class="edu-name">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</p>
+              <p class="edu-place">IES José Luis Sampedro · Tres Cantos, Madrid</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year">2022 — 2024</span>
+            <div>
+              <p class="edu-name">Bachillerato Científico Tecnológico · Programa de Excelencia</p>
+              <p class="edu-place">IES Pintor Antonio López · Tres Cantos, Madrid</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card glow stat">
+          <p class="card-label">Ciclo DAW</p>
+          <div>
+            <p class="stat-num">2027</p>
+            <p class="stat-label">fin del ciclo formativo</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="formacion">
+    <section class="section" id="habilidades">
       <div class="section-head">
-        <p class="section-label">// formación académica</p>
-        <h2>Formación</h2>
+        <p class="section-label"><b>02</b> — habilidades</p>
+        <h2>Stack <em>técnico</em></h2>
       </div>
-      <div class="edu-list">
-        <div class="edu-item">
-          <span class="edu-year">2025 — 2027</span>
-          <div>
-            <p class="edu-name">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</p>
-            <p class="edu-place">IES José Luis Sampedro · Tres Cantos, Madrid</p>
-          </div>
-        </div>
-        <div class="edu-item">
-          <span class="edu-year">2022 — 2024</span>
-          <div>
-            <p class="edu-name">Bachillerato Científico Tecnológico · Programa de Excelencia</p>
-            <p class="edu-place">IES Pintor Antonio López · Tres Cantos, Madrid</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="habilidades">
-      <div class="section-head">
-        <p class="section-label">// habilidades técnicas</p>
-        <h2>Habilidades</h2>
-      </div>
       <div class="skills-grid">
-        <a class="skill-card" href="java.html">
+        <a class="card glow skill is-link" href="proyectos/java.html">
+          <div class="skill-top"><span>01</span><span class="skill-arrow">↗</span></div>
           <p class="skill-name">Java</p>
           <p class="skill-level">POO · JDBC · Swing · Serialización</p>
         </a>
-        <a class="skill-card" href="php.html">
-          <p class="skill-name">PHP</p>
-          <p class="skill-level">En formación</p>
-        </a>
-        <a class="skill-card" href="sql.html">
+        <a class="card glow skill is-link" href="proyectos/sql.html">
+          <div class="skill-top"><span>02</span><span class="skill-arrow">↗</span></div>
           <p class="skill-name">SQL / MariaDB</p>
           <p class="skill-level">DDL · DML · DQL · DCL · TCL · Procedimientos · Triggers · Funciones</p>
         </a>
-        <div class="skill-card">
-          <p class="skill-name">HTML / CSS</p>
-          <p class="skill-level">Maquetación · Responsive design</p>
-        </div>
-        <a class="skill-card" href="mongodb.html">
+        <a class="card glow skill is-link" href="proyectos/mongodb.html">
+          <div class="skill-top"><span>03</span><span class="skill-arrow">↗</span></div>
           <p class="skill-name">MongoDB</p>
           <p class="skill-level">DDL · DML · Agregaciones</p>
         </a>
-        <div class="skill-card">
-          <p class="skill-name">AWS</p>
-          <p class="skill-level">Fundamentos · Cloud básico</p>
+        <a class="card glow skill is-link" href="proyectos/php.html">
+          <div class="skill-top"><span>04</span><span class="skill-arrow">↗</span></div>
+          <p class="skill-name">PHP</p>
+          <p class="skill-level">En formación</p>
+        </a>
+        <div class="card glow skill">
+          <div class="skill-top"><span>05</span></div>
+          <p class="skill-name">HTML / CSS</p>
+          <p class="skill-level">Maquetación · Responsive design</p>
         </div>
-        <div class="skill-card">
+        <div class="card glow skill">
+          <div class="skill-top"><span>06</span></div>
           <p class="skill-name">Git / GitHub</p>
           <p class="skill-level">Control de versiones · GitHub Pages</p>
+        </div>
+        <div class="card glow skill">
+          <div class="skill-top"><span>07</span></div>
+          <p class="skill-name">AWS</p>
+          <p class="skill-level">Fundamentos · Cloud básico</p>
         </div>
       </div>
     </section>
 
-    <section id="proyectos">
+    <section class="section" id="proyectos">
       <div class="section-head">
-        <p class="section-label">// proyectos por asignatura</p>
-        <h2>Proyectos</h2>
+        <p class="section-label"><b>03</b> — proyectos</p>
+        <h2>Proyectos por <em>asignatura</em></h2>
       </div>
-      <div class="subjects-grid">
-        <a class="subject-card" href="java.html">
-          <p class="subject-name">Java</p>
-          <p class="subject-count">18 proyectos</p>
+
+      <div class="subject-list">
+        <a class="subject-row" href="proyectos/java.html">
+          <span class="row-num">01</span>
+          <span class="row-name">Java</span>
+          <span class="row-meta">18 proyectos</span>
+          <span class="row-arrow">→</span>
         </a>
-        <a class="subject-card" href="sql.html">
-          <p class="subject-name">SQL / MariaDB</p>
-          <p class="subject-count">1 proyecto</p>
+        <a class="subject-row" href="proyectos/sql.html">
+          <span class="row-num">02</span>
+          <span class="row-name">SQL / MariaDB</span>
+          <span class="row-meta">1 proyecto</span>
+          <span class="row-arrow">→</span>
         </a>
-        <a class="subject-card" href="mongodb.html">
-          <p class="subject-name">MongoDB</p>
-          <p class="subject-count">Próximamente</p>
+        <a class="subject-row" href="proyectos/mongodb.html">
+          <span class="row-num">03</span>
+          <span class="row-name">MongoDB</span>
+          <span class="row-meta">Próximamente</span>
+          <span class="row-arrow">→</span>
         </a>
-        <a class="subject-card" href="php.html">
-          <p class="subject-name">PHP</p>
-          <p class="subject-count">Próximamente</p>
+        <a class="subject-row" href="proyectos/php.html">
+          <span class="row-num">04</span>
+          <span class="row-name">PHP</span>
+          <span class="row-meta">Próximamente</span>
+          <span class="row-arrow">→</span>
         </a>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="footer-row">
-      <p>© 2026 Mia Kaori</p>
-      <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener">GitHub →</a>
-    </div>
+  <footer class="footer">
+    <p>© 2026 Mia Kaori</p>
+    <a href="https://github.com/Mia-Kaori" target="_blank" rel="noopener">GitHub ↗</a>
   </footer>
 
-  <!-- Aparición al hacer scroll -->
-  <script>
-    const elementos = document.querySelectorAll('.section-head, .about-text, .edu-item, .skill-card, .subject-card, .project-card, .empty');
-    elementos.forEach(el => el.classList.add('reveal'));
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    elementos.forEach(el => observer.observe(el));
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
