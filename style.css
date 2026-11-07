@@ -51,7 +51,6 @@ svg { display: block; }
 ::selection { background: var(--accent); color: var(--bg); }
 [id] { scroll-margin-top: 6rem; }
 
-/* Transición circular al cambiar de tema */
 ::view-transition-old(root),
 ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
 
