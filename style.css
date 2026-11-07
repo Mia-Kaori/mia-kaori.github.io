@@ -298,3 +298,85 @@ footer {
   .reveal { opacity: 1; translate: none; }
   * { transition: none !important; }
 }
+
+/* ===== Tarjetas de asignaturas (portada) ===== */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.subject-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  min-height: 170px;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.subject-card.reveal {
+  transition: opacity 0.6s ease, translate 0.6s ease, transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.subject-name {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1;
+  text-transform: uppercase;
+  padding-right: 2rem;
+}
+.subject-count {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.subject-card::after {
+  content: "→";
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 1.4rem;
+  transition: transform 0.2s;
+}
+.subject-card:hover {
+  background: var(--ink);
+  color: var(--bg);
+  transform: translate(-4px, -4px);
+  box-shadow: 7px 7px 0 var(--accent);
+}
+.subject-card:hover .subject-count { color: #c4b0f5; }
+.subject-card:hover::after { transform: translateX(4px); }
+
+/* ===== Cabecera de las páginas de proyectos ===== */
+.page-head {
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 3rem) clamp(2rem, 5vw, 3rem);
+  border-bottom: 2px solid var(--ink);
+}
+.page-head h1 {
+  font-family: var(--display);
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.page-head h1 .count { color: var(--accent); }
+.page-intro {
+  margin-top: 1rem;
+  max-width: 40rem;
+  color: var(--muted);
+}
+.back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.back:hover { border-color: var(--accent); }
